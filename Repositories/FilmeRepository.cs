@@ -14,7 +14,7 @@ namespace api_filmes_senai.Repositories
             _context = context;
         }
 
-        List<Filme> IFilmeRepository.Listar => throw new NotImplementedException();
+       
 
         public void Atualizar(Guid id, Filme filme)
         {
@@ -104,5 +104,6 @@ namespace api_filmes_senai.Repositories
         }
 
        
+
     }
 }

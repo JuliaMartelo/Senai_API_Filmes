@@ -7,7 +7,7 @@ namespace api_filmes_senai.Interfaces
 
         void Cadastrar(Filme novoFilme);
 
-        List<Filme> Listar { get; }
+        List<Filme> Listar();
 
         void Atualizar (Guid id, Filme filme);
 
