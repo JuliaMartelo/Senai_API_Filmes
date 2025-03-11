@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>api_filmes_senai</name>
+    </assembly>
+    <members>
+        <member name="P:api_filmes_senai.Context.Filme_Context.Genero">
+            <summary>
+            Define que as tabelas se transformarao em tabelas no BD
+            </summary>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.Get">
+            <summary>
+            Endpoint para listar
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.Post(api_filmes_senai.Domains.Filme)">
+            <summary>
+            Endpoint para cadastrar
+            </summary>
+            <param name="novoFilme"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.Put(System.Guid,api_filmes_senai.Domains.Filme)">
+            <summary>
+            Endpoint para atualizar
+            </summary>
+            <param name="id"></param>
+            <param name="filme"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.Delete(System.Guid)">
+            <summary>
+             Endpoint para deletar
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.ListarPorGenero(System.Guid)">
+            <summary>
+             Endpoint para listar por genero
+            </summary>
+            <param name="idGenero"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.GetByGenero(System.Guid)">
+            <summary>
+            Endpoint listar de filme por genero
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.GeneroController.GetById(System.Guid)">
+            <summary>
+            Endpoint para buscar um Gênero pelo seu id
+            </summary>
+            <param name="id">id do genero buscado</param>
+            <returns>Gênero Buscado</returns>
+        </member>
+        <member name="P:api_filmes_senai.Domains.Filme.IdGenero">
+            <summary>
+            Referencia da tabela Genero
+            </summary>
+        </member>
+        <member name="T:api_filmes_senai.Interfaces.IGeneroRepository">
+            <summary>
+            Interface para Genero : Contrato
+            Toda classe que herdar(implementar) essa interface, devera implementar
+            todos os metodos definidos aqui dentro
+            </summary>
+        </member>
+        <member name="T:api_filmes_senai.Migrations.DB">
+            <inheritdoc />
+        </member>
+        <member name="M:api_filmes_senai.Migrations.DB.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_filmes_senai.Migrations.DB.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_filmes_senai.Migrations.DB.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:api_filmes_senai.Migrations.Db_Filmes_V2">
+            <inheritdoc />
+        </member>
+        <member name="M:api_filmes_senai.Migrations.Db_Filmes_V2.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_filmes_senai.Migrations.Db_Filmes_V2.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_filmes_senai.Migrations.Db_Filmes_V2.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:api_filmes_senai.Repositories.GeneroRepository">
+            <summary>
+            Classe que vai implementar a interface IGeneroRepository
+            ou seja vamos implementar os metodos(Toda a logica)
+            </summary>
+        </member>
+        <member name="F:api_filmes_senai.Repositories.GeneroRepository._context">
+            <summary>
+            Variavel privada 
+            </summary>
+        </member>
+        <member name="M:api_filmes_senai.Repositories.GeneroRepository.#ctor(api_filmes_senai.Context.Filme_Context)">
+            <summary>
+            Construtor do Repositorio
+            Aqui, toda vez que um costrutor for chamado,
+            os dados do contexto estarao disponiveis 
+            </summary>
+            <param name="contexto"></param>
+        </member>
+    </members>
+</doc>

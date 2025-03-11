@@ -17,6 +17,10 @@ namespace api_filmes_senai.Controllers
         {
             _filmeRepository = filmeRepository;
         }
+        /// <summary>
+        /// Endpoint para listar
+        /// </summary>
+        /// <returns></returns>
 
         [HttpGet]
         public IActionResult Get()
@@ -34,6 +38,11 @@ namespace api_filmes_senai.Controllers
             }
 
         }
+        /// <summary>
+        /// Endpoint para cadastrar
+        /// </summary>
+        /// <param name="novoFilme"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult Post(Filme novoFilme)
         {
@@ -48,6 +57,12 @@ namespace api_filmes_senai.Controllers
                 return BadRequest(e.Message);
             }
         }
+        /// <summary>
+        /// Endpoint para atualizar
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="filme"></param>
+        /// <returns></returns>
 
         [HttpPut("{id}")]
         public IActionResult Put(Guid id, Filme filme)
@@ -66,7 +81,11 @@ namespace api_filmes_senai.Controllers
 
 
         }
-
+        /// <summary>
+        ///  Endpoint para deletar
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public IActionResult Delete(Guid id)
         {
@@ -82,6 +101,11 @@ namespace api_filmes_senai.Controllers
             }
         }
 
+        /// <summary>
+        ///  Endpoint para listar por genero
+        /// </summary>
+        /// <param name="idGenero"></param>
+        /// <returns></returns>
         [HttpGet("genero/{idGenero}")]
         public IActionResult ListarPorGenero(Guid idGenero)
         {
@@ -95,6 +119,11 @@ namespace api_filmes_senai.Controllers
             return Ok(filmes);
         }
 
+        /// <summary>
+        /// Endpoint listar de filme por genero
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("ListarPorGenero/{id}")]
         public IActionResult GetByGenero(Guid id)
         {
